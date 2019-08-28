@@ -1,1 +1,1 @@
-// export { tryAuth, registration } from './auth';
+export { tryAuth, registerUser } from './auth';
