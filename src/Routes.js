@@ -6,16 +6,17 @@ import Layout from './hoc/Layout';
 import RegisterLogin from './component/RegisterLogin';
 import Register from './component/RegisterLogin/register';
 import UserDashBoard from './component/user';
+import Auth from './hoc/Layout/auth';
 
 
 const Routes = () => {
   return (
     <Layout>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/user/dashBoard" exact component={UserDashBoard} />
-        <Route path="/registerLogin" exact component={RegisterLogin} />
-        <Route path="/register" exact component={Register} />
+        <Route path="/" exact component={Auth(Home, null)} />
+        <Route path="/user/dashBoard" exact component={Auth(UserDashBoard, true)} />
+        <Route path="/registerLogin" exact component={Auth(RegisterLogin, false)} />
+        <Route path="/register" exact component={Auth(Register, false)} />
       </Switch>
     </Layout>
   );

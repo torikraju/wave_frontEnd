@@ -1,1 +1,5 @@
-export { tryAuth, registerUser } from './auth';
+export {
+  tryAuth,
+  registerUser,
+  getUser,
+} from './auth';
